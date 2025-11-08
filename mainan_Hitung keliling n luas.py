@@ -2,6 +2,7 @@
 
 # tapi cuma persegi, persegi panjang, lingkaran hehe
 
+#INI WM
 print("Welcome! tools ini ngitung keliling dan luas suatu bangun datar!")
 
 def persegi() :
@@ -35,4 +36,5 @@ elif user == "lingkaran" :
     lingkaran()
 else :
     print("Apaansih?!")
+
     
