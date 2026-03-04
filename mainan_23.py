@@ -7,18 +7,24 @@ class Character:  #parent class
     def bad(self):
         print("This character has bad personality")
 
-class Sora(Character):
-    face = "beautiful"
+class Gender:
+    def __init__(self, gender):
+        self.gender = gender
+
+        match self.gender:
+            case "cowo" :
+                self.looks = "handsome"
+            case "cewe" :
+                self.looks = "pretty"
+
+class Sora(Gender, Character):
     smart = 100
-    happiness = 20
-                                #children class
-class Kaito(Character):
-    face = "handsome"
+    happiness = 20                           #children class
+class Kaito(Gender, Character):
     smart = 101
     happiness = 50
 
-sora = Sora()
-kaito = Kaito()
+sora = Sora("cewe")
+kaito = Kaito("cowo")
 
-print(sora.face)
-sora.kind()
+print(kaito.looks)
